@@ -9,3 +9,15 @@
 
 If the halves won't connect: flash settings_reset-nice_nano_v2-zmk.uf2 to BOTH halves, then re-flash the
 normal firmware, then reset both halves at the same time.
+
+## Firmware builds
+
+Download firmware from the Actions run that matches what you want:
+
+| Build | Keymap |
+|---|---|
+| [Reserve extra layers](https://github.com/LogicEgg/zmk-config-lily58hw/actions/runs/41030529386) | Default keymap (stock starter layout) |
+| **Back up Studio layout to keymap** | My keybinds (exported from ZMK Studio) |
+
+The keymap only loads after `settings_reset` or **Restore Stock Settings** in ZMK Studio.
+Until then, the keyboard keeps whatever layout was last saved in Studio.
