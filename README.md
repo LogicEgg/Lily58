@@ -19,8 +19,9 @@ A handwired, wireless split [Lily58](https://github.com/kata0510/Lily58) running
 | SuperMini nRF52840 (nice!nano v2 clone) | 2 | One per half |
 | MX-style switches | 58 | Built with KTT Kang White V3 |
 | 1N4148 diodes | 58 | One per switch |
-| LiPo battery | 2 | Wired to B+ / B− on each controller |
-| Power switch | 2 | Optional, between the battery and B+ |
+| 103450 LiPo battery (3.7 V, 2000 mAh) | 2 | Search "103450 lipo". Wired to B+ / B− on each controller. |
+| JST-PH 2.0 2-pin connector pair | 2 | Search "JST PH 2.0 2 pin". Lets the battery unplug. |
+| KCD11 rocker switch (10 × 15 mm) | 2 | Search "KCD11 rocker switch". Power switch between the battery and B+. |
 | Wire | — | For rows, columns and battery |
 | 3D-printed case and plate | 1 set | See [`case/`](case) |
 
