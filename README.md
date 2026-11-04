@@ -16,8 +16,8 @@ Download firmware from the Actions run that matches what you want:
 
 | Build | Keymap |
 |---|---|
-| [Reserve extra layers](https://github.com/LogicEgg/zmk-config-lily58hw/actions/runs/41030529386) | Default keymap (stock starter layout) |
-| **Back up Studio layout to keymap** | My keybinds (exported from ZMK Studio) |
+| [Default keymap](https://github.com/LogicEgg/Lily58/actions/runs/41030529386) | Default keymap (stock starter layout) |
+| [Latest keymap](https://github.com/LogicEgg/Lily58/actions/runs/41932546190) | My keybinds (exported from ZMK Studio) |
 
 The keymap only loads after `settings_reset` or **Restore Stock Settings** in ZMK Studio.
 Until then, the keyboard keeps whatever layout was last saved in Studio.
