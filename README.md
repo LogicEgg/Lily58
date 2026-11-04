@@ -49,7 +49,7 @@ On the thumb row, the four thumb keys are on columns 1–4, and the inner key is
 
 ## Case
 
-The STL files are in [`case/`](case):
+The STL files are in [`case/`](case). They're a remodel of [Handwired Lily58 on Printables](https://www.printables.com/model/1321348-handwired-lily58).
 
 - `plate-left.STL`
 - `case-left.STL`
@@ -124,4 +124,5 @@ Hold a layer key (MO) to use that layer.
 ## Credits
 
 - [Lily58](https://github.com/kata0510/Lily58) by kata0510
+- Case based on [Handwired Lily58](https://www.printables.com/model/1321348-handwired-lily58) (Printables)
 - [ZMK Firmware](https://zmk.dev)
