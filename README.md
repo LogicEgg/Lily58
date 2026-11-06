@@ -59,18 +59,9 @@ Photos of the wiring (seen from the back, **blue = rows**, **red = columns**):
 
 The STL files are in [`case/`](case). They're a remodel of [Handwired Lily58 on Printables](https://www.printables.com/model/1321348-handwired-lily58). The files are for the left half: **mirror them in your slicer** for the right half.
 
-## Firmware
+## Flashing
 
-Download firmware from the GitHub Actions run that matches what you want:
-
-| Build | Keymap |
-|---|---|
-| [Default keymap](https://github.com/LogicEgg/Lily58/releases/tag/v1.0-default) | Default keymap (stock starter layout) |
-| [Latest keymap](https://github.com/LogicEgg/Lily58/releases/tag/v1.1) | My keybinds (exported from ZMK Studio) |
-
-The keymap only loads after `settings_reset` or **Restore Stock Settings** in ZMK Studio. Until then, the keyboard keeps whatever layout was last saved in Studio.
-
-### Flashing
+Download the `.uf2` files from [Releases](https://github.com/LogicEgg/Lily58/releases).
 
 1. Put a half into bootloader mode. A USB drive called `NICENANO` appears.
    - Double-tap **RST to GND**, or
@@ -80,7 +71,7 @@ The keymap only loads after `settings_reset` or **Restore Stock Settings** in ZM
    - Right half: `lily58hw_right-nice_nano_v2-zmk.uf2`
 3. Pair **Lily58** over Bluetooth.
 
-Keymap changes only need the **left** half re-flashed.
+Keymap changes only need the **left** half re-flashed. A new keymap only loads after `settings_reset` or **Restore Stock Settings** in ZMK Studio; until then, the keyboard keeps whatever layout was last saved in Studio.
 
 ## Keymap
 
@@ -90,6 +81,7 @@ Keymap changes only need the **left** half re-flashed.
   - **Esc / `**: Grave/Escape. Sends Esc, or `` ` `` while Shift or GUI is held.
   - **[ and ]**: Layer-Tap. Tap for the bracket, hold for layer 3.
   - **MO 1** is on both thumbs.
+  - **Shft / tap: Del**: Mod-Tap. Hold for Right Shift, tap for Delete.
 - **Layer 1, Fn (hold MO 1)**
   - F1–F12, `` ` ``, arrows, volume, Caps Lock, Print Screen and Delete.
   - **BT clear** and **BT 0–3** sit under F7–F11. BT 0–3 switch between paired devices; BT clear forgets the device on the current slot.
