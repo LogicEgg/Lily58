@@ -65,8 +65,8 @@ Download firmware from the GitHub Actions run that matches what you want:
 
 | Build | Keymap |
 |---|---|
-| [Default keymap](https://github.com/LogicEgg/Lily58/actions/runs/41030529386) | Default keymap (stock starter layout) |
-| [Latest keymap](https://github.com/LogicEgg/Lily58/actions/runs/42150524371) | My keybinds (exported from ZMK Studio) |
+| [Default keymap](https://github.com/LogicEgg/Lily58/releases/tag/v1.0-default) | Default keymap (stock starter layout) |
+| [Latest keymap](https://github.com/LogicEgg/Lily58/releases/tag/v1.1) | My keybinds (exported from ZMK Studio) |
 
 The keymap only loads after `settings_reset` or **Restore Stock Settings** in ZMK Studio. Until then, the keyboard keeps whatever layout was last saved in Studio.
 
