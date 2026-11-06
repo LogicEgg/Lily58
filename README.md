@@ -53,7 +53,7 @@ Photos of the wiring (seen from the back, **blue = rows**, **red = columns**):
 
 | Left half | Right half |
 |---|---|
-| ![Left half wiring](wiring/left_half_back.png) | ![Right half wiring](wiring/right_half_back.png) |
+| ![Left half wiring](wiring/left-wiring.png) | ![Right half wiring](wiring/right-wiring.png) |
 
 ## Case
 
