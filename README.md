@@ -9,8 +9,7 @@ A handwired, wireless split [Lily58](https://github.com/kata0510/Lily58) running
 - Handwired 58-key Lily58 layout (6×4 per half, plus 4 thumb keys and 1 inner key)
 - Wireless split over Bluetooth: no TRRS cable. The left half connects to the computer.
 - ZMK firmware with **ZMK Studio** support. Remap keys live at [zmk.studio](https://zmk.studio), no re-flashing.
-- 9 layers available in Studio (4 used, 5 spare)
-- 3D-printed case (`case/`)
+- 3D-printed case
 
 ## You will need
 
@@ -48,15 +47,15 @@ Both halves use the same pins. Diodes are **COL2ROW**: the stripe on each diode 
 
 On the thumb row, the four thumb keys are on columns 1–4, and the inner key is on column 5.
 
+Photos of the wiring (seen from the back, **blue = rows**, **red = columns**):
+
+| Left half | Right half |
+|---|---|
+| ![Left half wiring](wiring/left_half_back.png) | ![Right half wiring](wiring/right_half_back.png) |
+
 ## Case
 
-The STL files are in [`case/`](case). They're a remodel of [Handwired Lily58 on Printables](https://www.printables.com/model/1321348-handwired-lily58).
-
-- `plate-left.STL`
-- `case-left.STL`
-- `battery-cover.STL`
-
-The files are for the left half. **Mirror them in your slicer** for the right half.
+The STL files are in [`case/`](case). They're a remodel of [Handwired Lily58 on Printables](https://www.printables.com/model/1321348-handwired-lily58). The files are for the left half: **mirror them in your slicer** for the right half.
 
 ## Firmware
 
@@ -67,13 +66,13 @@ Download firmware from the GitHub Actions run that matches what you want:
 | [Default keymap](https://github.com/LogicEgg/Lily58/actions/runs/41030529386) | Default keymap (stock starter layout) |
 | [Latest keymap](https://github.com/LogicEgg/Lily58/actions/runs/41932546190) | My keybinds (exported from ZMK Studio) |
 
-The [`firmware/`](firmware) folder also has copies of the `.uf2` files.
-
 The keymap only loads after `settings_reset` or **Restore Stock Settings** in ZMK Studio. Until then, the keyboard keeps whatever layout was last saved in Studio.
 
 ### Flashing
 
-1. Double-tap **RST to GND** on a half. A USB drive called `NICENANO` appears.
+1. Put a half into bootloader mode. A USB drive called `NICENANO` appears.
+   - Double-tap **RST to GND**, or
+   - Hold **[** or **]** and press the bottom corner key on that half (Ctrl on the left, `\` on the right).
 2. Copy the matching file onto the drive:
    - Left half: `lily58hw_left-nice_nano_v2-zmk.uf2` (the central half, which pairs with your computer)
    - Right half: `lily58hw_right-nice_nano_v2-zmk.uf2`
@@ -83,31 +82,26 @@ Keymap changes only need the **left** half re-flashed.
 
 ## Keymap
 
-Hold a layer key (MO) to use that layer.
+![All layers](layouts/current/all_layers.png)
 
-### Layer 0: Base
-![Layer 0 - Base](layout/layer0_base.png)
+- **Layer 0, Base**
+  - **Esc / `**: Grave/Escape. Sends Esc, or `` ` `` while Shift or GUI is held.
+  - **[ and ]**: Layer-Tap. Tap for the bracket, hold for layer 3.
+  - **MO 1** is on both thumbs.
+- **Layer 1, Fn (hold MO 1)**
+  - F1–F12, `` ` ``, arrows, volume, Caps Lock, Print Screen and Delete.
+  - **BT clear** and **BT 0–3** sit under F7–F11. BT 0–3 switch between paired devices; BT clear forgets the device on the current slot.
+  - **Studio unlock** sits under F12.
+- **Layer 2, Numpad**: a standard numpad on the right half. No key opens it yet; bind one in Studio to use it.
+- **Layer 3, Boot (hold [ or ])**: the bottom corner key on each half restarts that half into the bootloader.
 
-- **Esc / `**: Grave/Escape. Sends Esc, or `` ` `` while Shift or GUI is held.
-- **Shft / tap: Del**: Mod-Tap. Hold for Right Shift, tap for Delete.
-
-### Layer 1: Fn (hold MO 1)
-![Layer 1 - Fn](layout/layer1_fn.png)
-
-### Layer 2: Nav / Bluetooth (hold MO 2)
-![Layer 2 - Nav / Bluetooth](layout/layer2_nav_bt.png)
-
-- **BT 0–4**: switch between paired devices. **BT clear** forgets the device on the current slot.
-- **Studio unlock**: unlocks ZMK Studio for editing.
-
-### Layer 3: Numpad (hold MO 3)
-![Layer 3 - Numpad](layout/layer3_numpad.png)
+Layers 4–8 are spare slots for Studio.
 
 ## ZMK Studio
 
 1. Plug the **left** half in with a USB data cable.
 2. Open [zmk.studio](https://zmk.studio) in Chrome or Edge and connect.
-3. To unlock, hold **MO 2** and press the **top-right key**.
+3. To unlock, hold **MO 1** and press the key under **F12** (top right, second row).
 4. Click **Save** after making changes.
 
 ## Troubleshooting
@@ -119,7 +113,7 @@ Hold a layer key (MO) to use that layer.
   4. Remove Lily58 from your computer's Bluetooth settings and pair again.
 
   This also wipes your Studio changes.
-- **Windows says "Couldn't connect":** remove Lily58 in Windows, press **MO 2 + BT clear**, then pair again.
+- **Windows says "Couldn't connect":** remove Lily58 in Windows, press **MO 1 + BT clear**, then pair again.
 - **Keys go over USB instead of Bluetooth:** ZMK prefers USB while plugged in. Unplug to use Bluetooth.
 
 ## Credits
