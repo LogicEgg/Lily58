@@ -22,6 +22,8 @@ A handwired, wireless split [Lily58](https://github.com/kata0510/Lily58) running
 | JST-PH 2.0 2-pin connector pair | 2 | Search "JST PH 2.0 2 pin". Lets the battery unplug. |
 | KCD11 rocker switch (10 × 15 mm) | 2 | Search "KCD11 rocker switch". Power switch between the battery and B+. |
 | Wire | — | For rows, columns and battery |
+| M2 × 8 mm screws | 10 | |
+| M2 × 4 mm screws | 4 | |
 | 3D-printed case and plate | 1 set | See [`case/`](case) |
 
 ## Wiring
@@ -64,7 +66,7 @@ Download firmware from the GitHub Actions run that matches what you want:
 | Build | Keymap |
 |---|---|
 | [Default keymap](https://github.com/LogicEgg/Lily58/actions/runs/41030529386) | Default keymap (stock starter layout) |
-| [Latest keymap](https://github.com/LogicEgg/Lily58/actions/runs/41932546190) | My keybinds (exported from ZMK Studio) |
+| [Latest keymap](https://github.com/LogicEgg/Lily58/actions/runs/42150524371) | My keybinds (exported from ZMK Studio) |
 
 The keymap only loads after `settings_reset` or **Restore Stock Settings** in ZMK Studio. Until then, the keyboard keeps whatever layout was last saved in Studio.
 
